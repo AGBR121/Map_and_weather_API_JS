@@ -3,7 +3,7 @@ let autocomplete;
 let condicion;
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: -34.397, lng: 150.644 },
+        center: { lat: 35.45, lng: 139.625 },
         zoom: 8
     });
 
@@ -30,6 +30,7 @@ async function fetchWeather(lat, long) {
     try {
         const response = await fetch(url);
         const data = await response.json();
+        console.log(data);
         Weather(data.current_weather);
     } catch (error) {
         console.error('Error al obtener el clima:', error);
