@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clima y Mapa</title>
     <link rel="stylesheet" href="style.css">
-</script>
+    <!-- Leaflet (mapa gratuito, sin API key) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
     <header>
@@ -13,12 +14,13 @@
     </header>
     <div id="texto">
         <h2>Coloca una ubicación</h2>
-        <input id="autocomplete" type="text" placeholder="Ingresa una ubicación">
+        <input id="autocomplete" type="text" placeholder="Ingresa una ubicación" autocomplete="off">
+        <ul id="suggestions"></ul>
     </div>
-    <div id="map" style="height: 500px; width: 100%;"></div>
+    <div id="map" style="width: 100%;"></div>
     <div id="weather"></div>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxlO8ILdL4GvaE8wreaAke_-k3Al4V-IM&libraries=places&callback=initMap" loading=async defer></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script defer src="javascript.js"></script>
 </body>
 </html>
